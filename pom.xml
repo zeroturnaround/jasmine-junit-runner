@@ -9,6 +9,26 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>Jasmine Junit Runner</name>
 
+  <scm>
+    <connection>scm:git:${basedir}</connection>
+    <developerConnection>scm:git:${basedir}</developerConnection>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>zt-public-releases</id>
+      <name>ZeroTurnaround Public Releases</name>
+      <url>dav:http://repos.zeroturnaround.com/nexus/content/repositories/zt-public-releases</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <id>zt-public-snapshots</id>
+      <name>ZeroTurnaround Public Snapshots</name>
+      <url>dav:http://repos.zeroturnaround.com/nexus/content/repositories/zt-public-snapshots</url>
+      <layout>default</layout>
+    </snapshotRepository>
+  </distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.mozilla</groupId>
