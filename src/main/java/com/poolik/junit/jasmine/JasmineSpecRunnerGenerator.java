@@ -39,7 +39,7 @@ class JasmineSpecRunnerGenerator {
 
 	public void generate() {
 		// TODO hardcoded relative path stuff wat configureerbaar maken
-		String template = loadTemplate();
+		String template = loadTemplate(suite.specRunnerTemplate());
 		template = replaceRelativePathsForLibs(template);
 		template = template.replaceAll(TemplatePlaceholders.SOURCE_FILES_TO_INCLUDE.getPlaceholder(),
 				getJavascriptFileIncludes("./../../../main/webapp/js", suite.sources()));
@@ -66,18 +66,18 @@ class JasmineSpecRunnerGenerator {
 		return sourceFileIncludes.toString();
 	}
 
-	private String loadTemplate() {
+	private String loadTemplate(String name) {
 		try {
 			return IOUtils.toString(
 				Thread
 					.currentThread()
 					.getContextClassLoader()
-					.getResourceAsStream("js/lib/specRunner.tpl")
+					.getResourceAsStream(name)
 			);
 		} catch (NullPointerException e) {
-			throw new IllegalStateException("spec runner template file not found!");
+			throw new IllegalStateException("spec runner template file '" + name + "' not found!");
 		} catch (IOException e) {
-			throw new IllegalStateException("spec runner template file could not be read!", e);
+			throw new IllegalStateException("spec runner template file '" + name + "' could not be read!", e);
 		}
 	}
 }

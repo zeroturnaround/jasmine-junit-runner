@@ -26,4 +26,6 @@ public @interface JasmineSuite {
     boolean envJs() default true;
 
     String specRunnerSubDir() default StringUtils.EMPTY;
+
+    String specRunnerTemplate() default "js/lib/specRunner.tpl";
 }
