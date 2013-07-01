@@ -37,14 +37,13 @@ class JasmineSpecRunnerGenerator {
 		this.outputFileName = outputFileName;
 	}
 
-	public void generate() {
-		// TODO hardcoded relative path stuff wat configureerbaar maken
+	public void generate(JasmineSuite suiteAnnotation) {
 		String template = loadTemplate(suite.specRunnerTemplate());
 		template = replaceRelativePathsForLibs(template);
 		template = template.replaceAll(TemplatePlaceholders.SOURCE_FILES_TO_INCLUDE.getPlaceholder(),
-				getJavascriptFileIncludes("./..", suite.sources()));
+				getJavascriptFileIncludes(suiteAnnotation.specRunnerSourcesRelativePath(), suite.sources()));
 		template = template.replaceAll(TemplatePlaceholders.SPEC_FILES_TO_INCLUDE.getPlaceholder(),
-				getJavascriptFileIncludes("./../specs", jasmineSpecs));
+				getJavascriptFileIncludes(suiteAnnotation.specRunnerSpecsRelativePath(), jasmineSpecs));
 
 		try {
 			FileUtils.writeStringToFile(new File(outputPath + "/" + outputFileName), template);

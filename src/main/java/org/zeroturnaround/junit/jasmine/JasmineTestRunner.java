@@ -214,7 +214,7 @@ public class JasmineTestRunner extends Runner {
 			  outputPath.append('/').append(suiteAnnotation.specRunnerSubDir());
 			}
 			new JasmineSpecRunnerGenerator(jasmineSpecs, suiteAnnotation, outputPath.toString(),
-					testClass.getSimpleName() + "Runner.html").generate();
+					testClass.getSimpleName() + "Runner.html").generate(suiteAnnotation);
 		}
 	}
 

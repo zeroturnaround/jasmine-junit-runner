@@ -29,5 +29,9 @@ public @interface JasmineSuite {
 
     String specRunnerTemplate() default "js/lib/specRunner.tpl";
 
+    String specRunnerSourcesRelativePath() default "./../../../main/webapp/js";
+
+    String specRunnerSpecsRelativePath() default "./../specs";
+
     boolean headJs() default false;
 }
