@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.junit.Before;
 
-import com.zeroturnaround.rhino.RhinoContext;
+import org.zeroturnaround.rhino.RhinoContext;
 
 
 public class JasmineTestRunnerBeforeAndAfterSuperClass {

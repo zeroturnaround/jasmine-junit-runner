@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.Description;
 
 import com.zeroturnaround.junit.jasmine.classes.JasmineSuiteGeneratorClassWithRunner;
+import org.zeroturnaround.junit.jasmine.JasmineTestRunner;
 
 public class DescriptionsWithMultipleSpecFilesTest {
 

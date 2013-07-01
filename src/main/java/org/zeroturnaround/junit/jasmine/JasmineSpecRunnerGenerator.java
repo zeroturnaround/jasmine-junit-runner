@@ -42,7 +42,7 @@ class JasmineSpecRunnerGenerator {
 		String template = loadTemplate(suite.specRunnerTemplate());
 		template = replaceRelativePathsForLibs(template);
 		template = template.replaceAll(TemplatePlaceholders.SOURCE_FILES_TO_INCLUDE.getPlaceholder(),
-				getJavascriptFileIncludes("./../../../main/webapp/js", suite.sources()));
+				getJavascriptFileIncludes("./..", suite.sources()));
 		template = template.replaceAll(TemplatePlaceholders.SPEC_FILES_TO_INCLUDE.getPlaceholder(),
 				getJavascriptFileIncludes("./../specs", jasmineSpecs));
 
@@ -60,8 +60,14 @@ class JasmineSpecRunnerGenerator {
 	private String getJavascriptFileIncludes(String path, String[] jsFiles) {
 		StringBuilder sourceFileIncludes = new StringBuilder();
 		for (String sourceFile : jsFiles) {
-			sourceFileIncludes.append("\t\t<script type='text/javascript' src='" + path + "/" + sourceFile
-					+ "'></script>\r\n");
+      if (suite.headJs())
+      {
+        sourceFileIncludes.append("\t\thead.js('").append(path).append("/").append(sourceFile).append("');\r\n");
+      }
+      else
+      {
+        sourceFileIncludes.append("\t\t<script type='text/javascript' src='").append(path).append("/").append(sourceFile).append("'></script>\r\n");
+      }
 		}
 		return sourceFileIncludes.toString();
 	}

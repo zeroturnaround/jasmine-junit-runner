@@ -28,4 +28,6 @@ public @interface JasmineSuite {
     String specRunnerSubDir() default StringUtils.EMPTY;
 
     String specRunnerTemplate() default "js/lib/specRunner.tpl";
+
+    boolean headJs() default false;
 }

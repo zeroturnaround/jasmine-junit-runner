@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.zeroturnaround.junit.jasmine.classes.JasmineTestRunnerBeforeAndAfterClass;
+import org.zeroturnaround.junit.jasmine.JasmineTestRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JasmineTestRunnerBeforeAndAfterTest {

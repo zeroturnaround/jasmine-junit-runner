@@ -14,6 +14,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.zeroturnaround.junit.jasmine.classes.JasmineTestRunnerSuccessSpec;
 import com.zeroturnaround.junit.jasmine.classes.JasmineTestRunnerDoesNotLoadEnvJS;
+import org.zeroturnaround.junit.jasmine.JasmineTestRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JasmineFinishedSpecsTest {

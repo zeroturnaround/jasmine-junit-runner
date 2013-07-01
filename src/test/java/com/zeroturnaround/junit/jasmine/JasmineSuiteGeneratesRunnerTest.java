@@ -18,6 +18,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import com.zeroturnaround.junit.jasmine.classes.JasmineSuiteGeneratorClassWithRunner;
 import com.zeroturnaround.junit.jasmine.classes.JasmineSuiteGeneratorClassWithRunnerInSubDir;
 import com.zeroturnaround.junit.jasmine.classes.JasmineSuiteGeneratorClassWithoutRunner;
+import org.zeroturnaround.junit.jasmine.JasmineTestRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JasmineSuiteGeneratesRunnerTest {

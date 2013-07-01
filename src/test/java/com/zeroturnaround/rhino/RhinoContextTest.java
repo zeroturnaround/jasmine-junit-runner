@@ -5,6 +5,8 @@ import static org.fest.assertions.Assertions.assertThat;
 import org.junit.Test;
 import org.mozilla.javascript.NativeObject;
 import org.mozilla.javascript.ScriptableObject;
+import org.zeroturnaround.rhino.RhinoContext;
+import org.zeroturnaround.rhino.RhinoRunnable;
 
 public class RhinoContextTest {
 

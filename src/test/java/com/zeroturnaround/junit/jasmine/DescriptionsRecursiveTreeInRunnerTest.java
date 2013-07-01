@@ -4,6 +4,8 @@ import static org.fest.assertions.Assertions.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.Description;
+import org.zeroturnaround.junit.jasmine.JasmineSuite;
+import org.zeroturnaround.junit.jasmine.JasmineTestRunner;
 
 public class DescriptionsRecursiveTreeInRunnerTest {
 

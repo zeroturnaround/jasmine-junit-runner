@@ -17,6 +17,7 @@ import org.mozilla.javascript.EvaluatorException;
 import com.zeroturnaround.junit.jasmine.classes.JasmineTestRunnerExceptionInJSCode;
 import com.zeroturnaround.junit.jasmine.classes.JasmineTestRunnerExceptionInSpec;
 import com.zeroturnaround.junit.jasmine.classes.JasmineTestRunnerFailingSpec;
+import org.zeroturnaround.junit.jasmine.JasmineTestRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JasmineFailingSpecsTest {

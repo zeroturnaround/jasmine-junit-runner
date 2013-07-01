@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.mozilla.javascript.EcmaError;
 import org.mozilla.javascript.NativeObject;
 import org.mozilla.javascript.tools.shell.Global;
+import org.zeroturnaround.rhino.RhinoContext;
 
 public class RhinoContextEnvjsLoadingTest {
 

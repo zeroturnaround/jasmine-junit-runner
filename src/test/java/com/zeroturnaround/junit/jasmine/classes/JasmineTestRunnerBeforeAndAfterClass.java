@@ -6,8 +6,8 @@ import static org.fest.assertions.Assertions.assertThat;
 import org.junit.After;
 import org.junit.Before;
 
-import com.zeroturnaround.junit.jasmine.JasmineSuite;
-import com.zeroturnaround.rhino.RhinoContext;
+import org.zeroturnaround.junit.jasmine.JasmineSuite;
+import org.zeroturnaround.rhino.RhinoContext;
 
 
 @JasmineSuite(specs = { "emptySpec.js" })

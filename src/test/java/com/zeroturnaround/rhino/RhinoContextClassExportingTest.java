@@ -3,6 +3,7 @@ package com.zeroturnaround.rhino;
 import static org.fest.assertions.Assertions.assertThat;
 
 import org.junit.Test;
+import org.zeroturnaround.rhino.RhinoContext;
 
 public class RhinoContextClassExportingTest {
 
